@@ -59,7 +59,7 @@ class Stacks(object):
 if __name__ == '__main__':
     stk = Stacks()
     print('stk is empty : %s' % stk.isEmpty())
-    print('stk length is %s' % stk.len())
+    stk.push('first')
     print('stk length is %s' % stk.len())
     print(stk.pop())
     print('stk length is %s' % stk.len())
