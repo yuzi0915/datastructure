@@ -30,7 +30,7 @@ class Queue(object):
         self.__tail = self.__tail.next
         self.__len +=1
         return True
-    # 从对头回去元素并删除
+    # 从队首获取元素并删除
     def get(self):
         if self.isEmpty():
             return False
