@@ -1,3 +1,4 @@
+##########
 # 队列节点
 class Node(object):
     def __init__(self, data, next = None):
