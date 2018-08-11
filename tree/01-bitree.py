@@ -1,11 +1,14 @@
+'Using Python to implement data structure'
+'CopyRight@zhangjiabao'
+'------Bitree------'
 import queue
-# 节点
+# Node class
 class Binode(object):
     def __init__(self, data, left = None, right = None):
         self.data = data
         self.left = left
         self.right =right
-# 前序遍历生成Tree
+# Tree class
 class Bitree(object):
     def __init__(self, queue):
         self.queue = queue
@@ -22,6 +25,7 @@ class Bitree(object):
         self.__createBitree(self.tree, 0, self.queue)
         self.__createBitree(self.tree, 1, self.queue)
     def __createBitree(self, binode, direction, queue):
+        '0 代表左结点，1 代表右结点'
         nodeData = queue.get()
         if direction == 0:
             if nodeData == '#':
