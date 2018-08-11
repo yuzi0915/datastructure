@@ -56,4 +56,3 @@ if __name__ == '__main__':
     q.clear()
     print('q get a ele: %s' % q.get())
     print('q is empty : %s' % q.isEmpty())
-    
