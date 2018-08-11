@@ -1,5 +1,6 @@
-##########
-# 队列节点
+'Using Python to implement data structure'
+'CopyRight@zhangjiabao'
+'------Queue------'
 class Node(object):
     def __init__(self, data, next = None):
         self.data = data

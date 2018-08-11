@@ -1,3 +1,6 @@
+'Using Python to implement data structure'
+'CopyRight@zhangjiabao'
+'------Stack------'
 # 栈元素
 class StackEle(object):
     def __init__(self, data, next=None):
