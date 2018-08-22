@@ -1,6 +1,4 @@
-'Using Python to implement data structure'
-'CopyRight@zhangjiabao'
-'------Bitree------'
+ 
 import queue
 # Node class
 class Binode(object):
