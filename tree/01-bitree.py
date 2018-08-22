@@ -103,6 +103,6 @@ if __name__ =='__main__':
         q.put(s)
     tree = Bitree(q)
     print(tree.preOrder())
-    # print(tree.midOrder())
-    # print(tree.postOrder())
+    print(tree.midOrder())
+    print(tree.postOrder())
     print(tree.cusorder())
