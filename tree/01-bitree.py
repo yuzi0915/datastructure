@@ -16,6 +16,7 @@ class Bitree(object):
         self.__prelist = []
         self.__midlist = []
         self.__postlist = []
+        self.__cuslist = []
         self.createBitree()
     # 前序遍历生成 Tree
     def createBitree(self):
@@ -74,14 +75,34 @@ class Bitree(object):
             self.__postOrder(tree.left)
             self.__postOrder(tree.right)
             self.__postlist.append(tree.data)
+    # 层序遍历
+    def cusorder(self): 
+        listQ = queue.Queue()
+        listQ.put(self.tree)
+        while  listQ.empty() is False:
+            currentNOde = listQ.get()
+            if currentNOde == '#':
+                 self.__cuslist.append('#')
+            else:
+                self.__cuslist.append(currentNOde.data)
+                if currentNOde.left is not None:
+                    listQ.put(currentNOde.left)
+                else:
+                    listQ.put('#')
+                if currentNOde.right is not None:
+                    listQ.put(currentNOde.right)
+                else:
+                    listQ.put('#')
+        return self.__cuslist
 
 
 # test
 if __name__ =='__main__':
     q = queue.Queue()
-    for s in 'AB#D##C##':
+    for s in 'ABDH###E#I##CF##G##':
         q.put(s)
     tree = Bitree(q)
     print(tree.preOrder())
-    print(tree.midOrder())
-    print(tree.postOrder())
+    # print(tree.midOrder())
+    # print(tree.postOrder())
+    print(tree.cusorder())
